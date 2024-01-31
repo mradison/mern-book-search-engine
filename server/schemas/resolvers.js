@@ -23,7 +23,6 @@ const resolvers = {
 
       return { token, user };
     },
-
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
@@ -31,16 +30,15 @@ const resolvers = {
         throw AuthenticationError;
       }
 
-      const correctPW = await user.isCorrectPassword(password);
+      const correctPw = await user.isCorrectPassword(password);
 
-      if (!correctPW) {
+      if (!correctPw) {
         throw AuthenticationError;
       }
 
       const token = signToken(user);
       return { token, user };
     },
-
     saveBook: async (parent, { bookData }, context) => {
       if (context.user) {
         const updatedUser = await User.findByIdAndUpdate(
@@ -54,7 +52,6 @@ const resolvers = {
 
       throw AuthenticationError;
     },
-
     removeBook: async (parent, { bookId }, context) => {
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
