@@ -1,7 +1,6 @@
 # mern-book-search-engine
 
 
-
 ## User Story
 
 AS AN avid reader
@@ -50,6 +49,7 @@ THEN I am logged out of the site and presented with a menu with the options Sear
 Here are some websites I used to help me with my assignment: (I also got help from my instructor, TA and Tutor):
 
 
+https://www.youtube.com/watch?v=bnCOyGaSe84
 
 
 I also went back to previous assignments and activities to get tips on how to code this assignment. 
